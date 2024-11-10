@@ -1,0 +1,60 @@
+.table-1-wrapper {
+  overflow: auto;
+  position: relative;
+  z-index: 2;
+}
+
+.table-1-card .resize-line {
+  position: fixed;
+  z-index: 2;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 1px;
+  background: #5b7cfd;
+}
+
+.table-1-card table {
+  border-collapse: collapse;
+  text-align: left;
+}
+
+.table-1-card table thead {
+  position: sticky;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+
+.table-1-card table th {
+  opacity: 0.5;
+  font-weight: 400;
+  padding: 0 10px;
+  user-select: none;
+  text-transform: capitalize;
+  background: #e2e7ec;
+}
+
+.table-1-card table :is(th, td) {
+  position: relative;
+  overflow: hidden;
+  white-space: nowrap;
+  height: 32px;
+  border: 1px solid #e2e7ec;
+}
+
+.table-1-card table .cell-content {
+  position: absolute;
+  top: 50%;
+  left: 10px;
+  translate: 0 -50%;
+}
+
+.table-1-card table th .draggable {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: 6px;
+  cursor: col-resize;
+}
